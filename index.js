@@ -83,12 +83,12 @@ const writeNewDataPoint = async (data) =>  {
             TotalPlugs: TotalPlugs,
             PowerTotal: PowerTotal,
             PowerUsed: PowerUsed,
-            AVAILABLE: AVAILABLE,
-            CHARGING: CHARGING,
-            UNKNOWN: UNKNOWN,
-            INOPERATIVE: INOPERATIVE,
-            REMOVED: REMOVED,
-            OUTOFORDER: OUTOFORDER
+            AVAILABLE: AVAILABLE || 0,
+            CHARGING: CHARGING || 0,
+            UNKNOWN: UNKNOWN || 0,
+            INOPERATIVE: INOPERATIVE || 0,
+            REMOVED: REMOVED || 0,
+            OUTOFORDER: OUTOFORDER || 0
         }
 
         writeNewDataPoint(to_influx);
